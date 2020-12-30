@@ -5,6 +5,7 @@ const app = Vue.createApp({
       showButtons: false,
       showMouseEvent: false,
       showShuttles: false,
+      url: "https://github.com/ayushman-git",
       name: "Ayushman",
       age: 22,
       x: 0,

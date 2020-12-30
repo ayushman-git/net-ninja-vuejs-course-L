@@ -10,6 +10,7 @@
   <body>
     <h1>Learning VueJs</h1>
     <div id="root">
+      <a :href="url">Github Profile</a>
       <p>My name is {{name}}. I'm {{age}} years old.</p>
       <button @click="showButtons = !showButtons">
         <span v-if="showButtons">Hide</span>
@@ -39,6 +40,7 @@
       <button @click="showMouseEvent = !showMouseEvent">
         Show Mouse Events
       </button>
+      <br />
 
       <!-- v-for -->
       <ul v-if="showShuttles">
@@ -48,6 +50,7 @@
         </li>
       </ul>
       <button @click="showShuttles = !showShuttles">Show Shuttles</button>
+      <br />
     </div>
     <script src="app.js"></script>
   </body>
