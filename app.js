@@ -4,8 +4,16 @@ const app = Vue.createApp({
     return {
       name: "Ayushman",
       age: 22,
-    }
-  }
+    };
+  },
+  methods: {
+    increaseAge() {
+      this.age++;
+    },
+    decreaseAge() {
+      this.age--;
+    },
+  },
 });
 
 app.mount("#root");
