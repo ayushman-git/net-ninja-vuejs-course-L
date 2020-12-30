@@ -6,3 +6,11 @@
   text-align: center;
   display: inline-block;
 }
+
+.shuttle-img {
+  width: 200px;
+}
+
+.fav {
+  background-color: rgb(198, 253, 153);
+}

@@ -44,9 +44,10 @@
 
       <!-- v-for -->
       <ul v-if="showShuttles">
-        <li v-for="shuttle in spaceShuttles">
+        <li v-for="shuttle in spaceShuttles" :class="{ fav: shuttle.isFav}" @click="shuttle.isFav = !shuttle.isFav">
           <h2>{{shuttle.name}}</h2>
           <p>🚩{{shuttle.launchYear}}</p>
+          <img class="shuttle-img" :src="`./assets/${shuttle.img}`" />
         </li>
       </ul>
       <button @click="showShuttles = !showShuttles">Show Shuttles</button>
