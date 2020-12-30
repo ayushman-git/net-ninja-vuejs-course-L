@@ -2,16 +2,21 @@ const app = Vue.createApp({
   // template: '<p>Rendered using {{this.lib}}</p>',
   data() {
     return {
+      showButtons: false,
       name: "Ayushman",
       age: 22,
     };
   },
   methods: {
-    increaseAge() {
-      this.age++;
+    changeName() {
+      if (this.name === "Ayushman") {
+        this.name = "Aman";
+      } else {
+        this.name = "Ayushman";
+      }
     },
-    decreaseAge() {
-      this.age--;
+    changeNameWithArg(name) {
+      this.name = name;
     },
   },
 });

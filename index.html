@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Learning Vue</title>
-  <script src="https://unpkg.com/vue@next"></script>
-</head>
-<body>
-  <h1>Learning VueJs</h1>
-  <div id="root">
-    <p>My name is {{name}}. I'm {{age}} years old.</p>
-    <button @click="increaseAge">+</button>
-    <button @click="decreaseAge">-</button>
-  </div>
-<script src="app.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning Vue</title>
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <h1>Learning VueJs</h1>
+    <div id="root">
+      <p>My name is {{name}}. I'm {{age}} years old.</p>
+      <button @click="showButtons = !showButtons">
+        <span v-if="showButtons">Hide</span>
+        <span v-else>Show</span>
+      </button>
+      <div v-if="showButtons">
+        <button @click="age++">+</button>
+        <button @click="age--">-</button>
+        <button @click="changeName">Change Name</button>
+        <button @click="changeNameWithArg('XenOn')">
+          Change Name With Argument
+        </button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
 </html>
