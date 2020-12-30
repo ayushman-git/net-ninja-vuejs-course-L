@@ -31,7 +31,9 @@
       <div class="box" @mouseover="eventHandler($event, 5)">Mouse over</div>
       <div class="box" @mouseleave="eventHandler">Mouse leave</div>
       <div class="box" @dblclick="eventHandler">Double click</div>
-      <div class="box"></div>
+      <div class="box" @mousemove="handleMove" @mouseleave="x = 0; y=0">
+        X - {{x}}<br />Y - {{y}}
+      </div>
     </div>
     <script src="app.js"></script>
   </body>

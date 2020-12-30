@@ -5,6 +5,8 @@ const app = Vue.createApp({
       showButtons: false,
       name: "Ayushman",
       age: 22,
+      x: 0,
+      y: 0
     };
   },
   methods: {
@@ -20,6 +22,10 @@ const app = Vue.createApp({
     },
     eventHandler(e, num) {
       console.log(e, num)
+    },
+    handleMove(e) {
+      this.x = e.offsetX;
+      this.y = e.offsetY;
     }
   },
 });
