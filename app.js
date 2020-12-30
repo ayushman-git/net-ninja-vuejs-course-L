@@ -18,6 +18,9 @@ const app = Vue.createApp({
     changeNameWithArg(name) {
       this.name = name;
     },
+    eventHandler(e, num) {
+      console.log(e, num)
+    }
   },
 });
 

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Learning Vue</title>
+    <link rel="stylesheet" href="./styles.css" />
     <script src="https://unpkg.com/vue@next"></script>
   </head>
   <body>
@@ -25,6 +26,12 @@
       <div v-show="showButtons">
         v-if re-renders the element. v-show hides using css
       </div>
+      <br />
+      <!-- Mouse events -->
+      <div class="box" @mouseover="eventHandler($event, 5)">Mouse over</div>
+      <div class="box" @mouseleave="eventHandler">Mouse leave</div>
+      <div class="box" @dblclick="eventHandler">Double click</div>
+      <div class="box"></div>
     </div>
     <script src="app.js"></script>
   </body>
