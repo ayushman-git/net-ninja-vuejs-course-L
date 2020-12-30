@@ -2,7 +2,8 @@ const app = Vue.createApp({
   // template: '<p>Rendered using {{this.lib}}</p>',
   data() {
     return {
-      lib: "VueJs"
+      name: "Ayushman",
+      age: 22,
     }
   }
 });
