@@ -28,12 +28,26 @@
       </div>
       <br />
       <!-- Mouse events -->
-      <div class="box" @mouseover="eventHandler($event, 5)">Mouse over</div>
-      <div class="box" @mouseleave="eventHandler">Mouse leave</div>
-      <div class="box" @dblclick="eventHandler">Double click</div>
-      <div class="box" @mousemove="handleMove" @mouseleave="x = 0; y=0">
-        X - {{x}}<br />Y - {{y}}
+      <div v-if="showMouseEvent">
+        <div class="box" @mouseover="eventHandler($event, 5)">Mouse over</div>
+        <div class="box" @mouseleave="eventHandler">Mouse leave</div>
+        <div class="box" @dblclick="eventHandler">Double click</div>
+        <div class="box" @mousemove="handleMove" @mouseleave="x = 0; y=0">
+          X - {{x}}<br />Y - {{y}}
+        </div>
       </div>
+      <button @click="showMouseEvent = !showMouseEvent">
+        Show Mouse Events
+      </button>
+
+      <!-- v-for -->
+      <ul v-if="showShuttles">
+        <li v-for="shuttle in spaceShuttles">
+          <h2>{{shuttle.name}}</h2>
+          <p>🚩{{shuttle.launchYear}}</p>
+        </li>
+      </ul>
+      <button @click="showShuttles = !showShuttles">Show Shuttles</button>
     </div>
     <script src="app.js"></script>
   </body>

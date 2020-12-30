@@ -3,10 +3,18 @@ const app = Vue.createApp({
   data() {
     return {
       showButtons: false,
+      showMouseEvent: false,
+      showShuttles: false,
       name: "Ayushman",
       age: 22,
       x: 0,
-      y: 0
+      y: 0,
+      spaceShuttles: [
+        { name: "Voyager 1", launchYear: 1977 },
+        { name: "Voyager 2", launchYear: 1977 },
+        { name: "Apollo 11", launchYear: 1969 },
+        { name: "Artemis", launchYear: 2024 },
+      ],
     };
   },
   methods: {
@@ -21,12 +29,12 @@ const app = Vue.createApp({
       this.name = name;
     },
     eventHandler(e, num) {
-      console.log(e, num)
+      console.log(e, num);
     },
     handleMove(e) {
       this.x = e.offsetX;
       this.y = e.offsetY;
-    }
+    },
   },
 });
 
