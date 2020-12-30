@@ -14,3 +14,12 @@
 .fav {
   background-color: rgb(198, 253, 153);
 }
+
+.shuttles {
+  display: flex;
+  justify-content: center;
+}
+
+.shuttles > li {
+  margin: 0 2em;
+}

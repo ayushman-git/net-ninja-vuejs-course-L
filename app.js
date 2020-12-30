@@ -18,6 +18,11 @@ const app = Vue.createApp({
       ],
     };
   },
+  computed: {
+    favMissions() {
+      return this.spaceShuttles.filter((shuttle) => shuttle.isFav);
+    },
+  },
   methods: {
     changeName() {
       if (this.name === "Ayushman") {
